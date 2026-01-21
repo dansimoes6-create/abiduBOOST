@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Serviços — abiduBOOST</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Planos de otimização FiveM para você escolher.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    background: #0b0f1a;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 80px;
+  }
+
+  /* HUD de topo */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 40px;
+    background: rgba(10,15,30,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .logo { font-size: 1.6rem; font-weight: 700; }
+  .logo span { color: #00d2ff; }
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  nav a:hover { opacity: 0.7; }
+
+  /* conteúdo principal */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    color: #00d2ff;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+    padding: 20px 0;
+  }
+
+  .card {
+    background: rgba(15,20,40,0.8);
+    border: 2px solid #00d2ff22;
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .card:hover {
+    border-color: #00d2ff88;
+    box-shadow: 0 0 18px rgba(0,210,255,0.45);
+  }
+
+  .card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 14px;
+    color: #00d2ff;
+  }
+
+  .card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 18px;
+  }
+
+  .price {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #00ffcc;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #00d2ff;
+    color: #0b0f1a;
+    font-weight: 600;
+    border-radius: 28px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background: #00b8ff;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0.7;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">abidu<span>BOOST</span></div>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="https://wa.me/5511943639094" target="_blank">WhatsApp</a>
+    <a href="#">Discord</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Escolha seu Plano de Otimização</h1>
+
+  <div class="grid">
+    <!-- Plano Básico -->
+    <div class="card">
+      <h2>Otimização Básica</h2>
+      <p>
+        Ajustes profissionais nos arquivos do seu jogo e adição de mods para
+        garantir que seu FiveM rode de forma mais suave e estável.
+      </p>
+      <div class="price">R$ 14,99</div>
+      <a href="https://wa.me/5511943639094?text=Quero%20Otimização%20Básica" class="btn" target="_blank">
+        Quero esse plano
+      </a>
+    </div>
+
+    <!-- Plano Potente -->
+    <div class="card">
+      <h2>Otimização Potente</h2>
+      <p>
+        Além das melhorias básicas, você recebe um aplicativo exclusivo de
+        otimização que permite ajustes automáticos no FiveM e no sistema.
+      </p>
+      <div class="price">R$ 19,99</div>
+      <a href="https://wa.me/5511943639094?text=Quero%20Otimização%20Potente" class="btn" target="_blank">
+        Quero esse plano
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 abiduBOOST — Todos os direitos reservados
+  </footer>
+</div>
+
+</body>
+</html>
