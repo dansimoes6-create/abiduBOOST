@@ -1,189 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>abiduBOOST - Otimização FiveM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abiduBOOST — Otimização FiveM</title>
 
-    <!-- Fonte moderna -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="abiduBOOST é uma empresa especializada em otimização FiveM. Transformamos PCs fracos em máquinas prontas para GTA RP." />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            min-height: 100vh;
-            color: #fff;
-            background: #050505;
-            overflow-x: hidden;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        /* FUNDO ANIMADO (efeito líquido) */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, #00ff9c55, transparent 40%),
-                radial-gradient(circle at 80% 70%, #00d4ff55, transparent 40%),
-                radial-gradient(circle at 50% 90%, #00ffcc33, transparent 45%);
-            animation: liquid 18s ease-in-out infinite alternate;
-            z-index: -1;
-        }
+    body {
+      min-height: 100vh;
+      background: #0b0f1a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
 
-        @keyframes liquid {
-            0% {
-                background-position: 0% 0%, 100% 100%, 50% 50%;
-            }
-            100% {
-                background-position: 100% 50%, 0% 50%, 50% 0%;
-            }
-        }
+    /* FUNDO LÍQUIDO */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        #3a7bd5,
+        #00d2ff,
+        #7f00ff,
+        #00ffcc
+      );
+      background-size: 400% 400%;
+      animation: liquid 18s ease infinite;
+      filter: blur(60px);
+      opacity: 0.6;
+      z-index: -1;
+    }
 
-        /* HEADER */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 22px 60px;
-        }
+    @keyframes liquid {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-        header h1 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #00ff9c;
-            letter-spacing: 0.5px;
-        }
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      background: rgba(10, 15, 30, 0.4);
+      backdrop-filter: blur(10px);
+    }
 
-        nav a {
-            margin-left: 32px;
-            text-decoration: none;
-            color: #ffffffcc;
-            font-size: 15px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
 
-        nav a:hover {
-            color: #00ff9c;
-        }
+    .logo span {
+      color: #00d2ff;
+    }
 
-        /* HERO */
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+    .socials a {
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0b0f1a;
+      background: linear-gradient(135deg, #00d2ff, #7f00ff);
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      transition: transform 0.3s ease;
+    }
 
-        .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            color: #00ff9c;
-            text-shadow: 0 0 20px #00ff9c55;
-        }
+    .socials a:hover {
+      transform: translateY(-3px);
+    }
 
-        .hero p {
-            max-width: 620px;
-            margin-top: 18px;
-            font-size: 16px;
-            color: #ffffffcc;
-            line-height: 1.6;
-        }
+    /* CONTEÚDO */
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 20px 60px;
+      text-align: center;
+    }
 
-        .hero a {
-            margin-top: 30px;
-            padding: 14px 36px;
-            border-radius: 50px;
-            background: linear-gradient(90deg, #00ff9c, #00d4ff);
-            color: #000;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .card {
+      max-width: 950px;
+      background: rgba(15, 20, 40, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 60px 45px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
 
-        .hero a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px #00ff9c88;
-        }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 25px;
+    }
 
-        /* TEXTO EXTRA (ÁREA AZUL DA PRINT) */
-        .promo {
-            max-width: 900px;
-            margin: 120px auto 0;
-            padding: 0 25px 120px;
-            text-align: center;
-        }
+    h1 span {
+      color: #00d2ff;
+    }
 
-        .promo h3 {
-            font-size: 30px;
-            font-weight: 600;
-            margin-bottom: 18px;
-            color: #ffffff;
-        }
+    .text-long {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      opacity: 0.95;
+      margin-bottom: 50px;
+    }
 
-        .promo p {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #ffffffbb;
-        }
+    .btn {
+      display: inline-block;
+      padding: 18px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #0b0f1a;
+      background: linear-gradient(135deg, #00d2ff, #7f00ff);
+      border-radius: 50px;
+      box-shadow: 0 12px 30px rgba(0,210,255,0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        /* RESPONSIVO */
-        @media (max-width: 768px) {
-            header {
-                padding: 20px 30px;
-            }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(127,0,255,0.5);
+    }
 
-            .hero h2 {
-                font-size: 36px;
-            }
+    footer {
+      margin-top: 50px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
 
-            .promo h3 {
-                font-size: 24px;
-            }
-        }
-    </style>
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .text-long {
+        font-size: 1rem;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>abiduBOOST</h1>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Discord</a>
-    </nav>
-</header>
+  <header>
+    <div class="logo">abidu<span>BOOST</span></div>
+    <div class="socials">
+      <a href="#" target="_blank">WhatsApp</a>
+      <a href="#" target="_blank">Discord</a>
+    </div>
+  </header>
 
-<section class="hero">
-    <h2>abiduBOOST</h2>
-    <p>
-        Empresa de otimização de FiveM criada em 2025, focada em desempenho,
-        estabilidade e máxima fluidez para servidores e jogadores.
-    </p>
-    <a href="#">Conheça nossos serviços</a>
-</section>
+  <div class="container">
+    <div class="card">
+      <h1>O sonho do GTA RP começa aqui</h1>
 
-<section class="promo">
-    <h3>Seu FiveM travando?</h3>
-    <p>
-        Você sempre sonhou em jogar GTA RP, mas seu computador não roda direito?
-        A abiduBOOST existe exatamente pra isso.  
-        Nós otimizamos seu sistema e seu FiveM para entregar mais FPS,
-        estabilidade e uma experiência muito mais fluida.
-        Deixe seu jogo rodando mais liso que sabonete.
-        <br><br>
-        Conheça nossos serviços e comece hoje mesmo.
-    </p>
-</section>
+      <p class="text-long">
+        Você sempre sonhou em jogar GTA RP, entrar na cidade, participar de
+        perseguições, RP sério e viver uma experiência completa — mas seu
+        computador simplesmente não aguenta?<br><br>
+
+        A <strong>abiduBOOST</strong> nasceu exatamente para isso. Somos uma
+        equipe especializada em otimização de FiveM, criada em 2025, focada
+        em transformar computadores fracos ou mal configurados em máquinas
+        capazes de rodar GTA RP com muito mais fluidez.<br><br>
+
+        Trabalhamos com ajustes avançados, configurações personalizadas e
+        otimizações feitas sob medida para cada PC, sempre buscando o máximo
+        desempenho possível. Nosso objetivo é simples: fazer você jogar sem
+        travamentos, sem stutter e com a melhor experiência que seu hardware
+        pode oferecer.
+      </p>
+
+      <a href="servicos.html" class="btn">Conheça nossos serviços</a>
+
+      <footer>
+        © 2025 abiduBOOST — Todos os direitos reservados
+      </footer>
+    </div>
+  </div>
 
 </body>
 </html>
