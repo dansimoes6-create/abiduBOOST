@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>abiduBOOST — Otimização FiveM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body {
+      min-height:100vh;
+      color:#fff;
+      overflow-x:hidden;
+      background:#0b0f1a;
+      position:relative;
+    }
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      background:linear-gradient(120deg,#3a7bd5,#00d2ff,#7f00ff,#00ffcc);
+      background-size:400% 400%;
+      animation:liquid 18s ease infinite;
+      filter:blur(60px);
+      opacity:0.6;
+      z-index:-1;
+    }
+    @keyframes liquid { 0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} }
+
+    header {
+      width:100%;
+      padding:20px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:10;
+      background: rgba(11,15,26,0.7);
+      backdrop-filter:blur(8px);
+    }
+    header h2 { font-size:1.8rem; font-weight:700; }
+    header a {
+      display:inline-block;
+      padding:10px 20px;
+      color:#0b0f1a;
+      font-weight:600;
+      text-decoration:none;
+      background:linear-gradient(135deg,#00d2ff,#7f00ff);
+      border-radius:50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow:0 5px 15px rgba(0,210,255,0.35);
+    }
+    header a:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(127,0,255,0.5); }
+
+    .hero {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      min-height:100vh;
+      padding:0 20px;
+    }
+    .hero h1 { font-size:3rem; font-weight:700; margin-bottom:25px; line-height:1.2; }
+    .hero h1 span { color:#00d2ff; }
+    .hero p { font-size:1.2rem; line-height:1.7; max-width:900px; margin-bottom:40px; color:#e0f7ff; }
+    .btn {
+      display:inline-block;
+      padding:16px 40px;
+      font-size:1rem;
+      font-weight:600;
+      text-decoration:none;
+      color:#0b0f1a;
+      background:linear-gradient(135deg,#00d2ff,#7f00ff);
+      border-radius:50px;
+      transition:transform 0.3s ease,box-shadow 0.3s ease;
+      box-shadow:0 10px 30px rgba(0,210,255,0.35);
+    }
+    .btn:hover { transform:translateY(-4px); box-shadow:0 15px 40px rgba(127,0,255,0.5); }
+
+    .info-section {
+      max-width:900px;
+      margin:80px auto 60px auto;
+      padding:0 20px;
+      text-align:center;
+    }
+    .info-section h2 { font-size:2.5rem; font-weight:700; margin-bottom:25px; }
+    .info-section p { font-size:1.15rem; line-height:1.7; color:#c0eaff; }
+
+    footer {
+      text-align:center;
+      padding:40px 20px;
+      font-size:0.8rem;
+      opacity:0.6;
+      background: rgba(11,15,26,0.7);
+      backdrop-filter:blur(8px);
+    }
+
+    @media (max-width:600px){
+      header h2 { font-size:1.4rem; }
+      .hero h1 { font-size:2.2rem; }
+      .hero p { font-size:1rem; }
+      .info-section h2 { font-size:2rem; }
+      .info-section p { font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>abiduBOOST</h2>
+    <a href="https://wa.me/5511943639094?text=Olá,%20quero%20comprar%20otimização">WhatsApp</a>
+  </header>
+
+  <section class="hero">
+    <h1>FiveM otimizado até em <span>PC fraco</span></h1>
+    <p>
+      Chega de travamentos e quedas de FPS no GTA RP. A abiduBOOST aplica otimizações profissionais para deixar seu FiveM liso e estável, mesmo em computadores antigos. Nossa equipe especializada ajusta arquivos, aplica mods e utiliza técnicas avançadas para garantir a melhor performance.
+    </p>
+    <a href="servicos.html" class="btn">Conhecer serviços</a>
+  </section>
+
+  <section class="info-section">
+    <h2>Sobre FiveM</h2>
+    <p>
+      Muitos jogadores sonham em jogar GTA RP, mas computadores fracos tornam isso difícil. A abiduBOOST trabalha para que qualquer PC consiga rodar FiveM com fluidez. Aplicamos otimizações detalhadas, ajustes de arquivos, mods compatíveis e configurações avançadas para que sua experiência seja a melhor possível.
+    </p>
+    <p>
+      Nossa equipe é especializada, e cada detalhe é pensado para reduzir travamentos, aumentar FPS e melhorar a estabilidade do servidor local. Você vai poder jogar GTA RP de forma confortável, mesmo em PCs que antes não eram capazes de rodar o jogo.
+    </p>
+  </section>
+
+  <footer>
+    © 2026 abiduBOOST — Todos os direitos reservados
+  </footer>
+</body>
+</html>
