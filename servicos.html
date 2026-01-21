@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>abiduBOOST — Serviços</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+  body { background:#0b0f1a; color:#fff; min-height:100vh; padding-top:70px; }
+
+  /* HEADER */
+  header {
+    position:fixed;
+    top:0; left:0; right:0;
+    height:70px;
+    background:rgba(15,20,40,0.95);
+    backdrop-filter:blur(10px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.5);
+    z-index:100;
+  }
+  header a { color:#00d2ff; text-decoration:none; font-weight:700; font-size:1.4rem; }
+  .header-buttons a {
+    margin-left:15px;
+    padding:8px 18px;
+    border-radius:50px;
+    font-weight:600;
+    text-decoration:none;
+    background:linear-gradient(135deg,#00d2ff,#7f00ff);
+    color:#0b0f1a;
+    transition:0.3s;
+  }
+  .header-buttons a:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(127,0,255,0.5); }
+
+  .services-container { max-width:1000px; margin:0 auto; padding:20px; }
+  h1 { text-align:center; font-size:2.8rem; color:#00d2ff; margin-bottom:40px; }
+  .services-box { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px; }
+
+  .service-card {
+    background:rgba(15,20,40,0.6);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    padding:30px 25px;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .service-card h3 { font-size:1.6rem; margin-bottom:15px; color:#00d2ff; }
+  .service-card p { font-size:1rem; line-height:1.6; margin-bottom:20px; opacity:0.9; }
+  .price { font-size:2rem; font-weight:700; margin-bottom:20px; }
+  .btn-buy { padding:12px 30px; border:none; border-radius:50px; font-weight:600; font-size:1rem; cursor:pointer;
+    background:linear-gradient(135deg,#00d2ff,#7f00ff); color:#0b0f1a; transition:0.3s; }
+  .btn-buy:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(127,0,255,0.5); }
+
+  /* POPUP */
+  #popup { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000; }
+  .popup-content { background:rgba(15,20,40,0.95); padding:30px; border-radius:18px; max-width:400px; text-align:center; box-shadow:0 0 40px rgba(0,0,0,0.7);}
+  .popup-content h2 { color:#00d2ff; margin-bottom:20px; }
+  .popup-content p { margin-bottom:25px; line-height:1.6; }
+  .popup-content .popup-btn { display:inline-block; margin:5px; padding:10px 25px; border-radius:50px; text-decoration:none; font-weight:600; color:#0b0f1a; background:linear-gradient(135deg,#00d2ff,#7f00ff); transition:0.3s; }
+  .popup-content .popup-btn:hover { transform:translateY(-3px); box-shadow:0 8px 25px rgba(127,0,255,0.5); }
+
+  footer { text-align:center; padding:40px 20px; font-size:0.8rem; opacity:0.6; margin-top:60px; }
+
+  @media(max-width:600px){
+    h1{font-size:2rem;}
+    .service-card{padding:25px 20px;}
+    .price{font-size:1.6rem;}
+    header { padding:0 15px; }
+    .header-buttons a { padding:6px 15px; font-size:0.9rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">abiduBOOST</a>
+  <div class="header-buttons">
+    <a href="https://wa.me/5511943639094" target="_blank">WhatsApp</a>
+    <a href="https://discord.gg/TCCTXjgEXr" target="_blank">Discord</a>
+  </div>
+</header>
+
+<div class="services-container">
+  <h1>Nossos Serviços</h1>
+  <div class="services-box">
+
+    <!-- Card 1 -->
+    <div class="service-card">
+      <h3>Otimização Básica</h3>
+      <p>Nossos profissionais ajustam arquivos do jogo e aplicam mods otimizados para desempenho estável e fluido no FiveM.</p>
+      <div class="price">R$ 14,99</div>
+      <button class="btn-buy" onclick="openPopup('Otimização Básica')">Quero este plano</button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-card">
+      <h3>Otimização Potente</h3>
+      <p>Inclui tudo da otimização básica, além de um aplicativo exclusivo de otimização para manter seu jogo sempre ajustado.</p>
+      <div class="price">R$ 19,99</div>
+      <button class="btn-buy" onclick="openPopup('Otimização Potente')">Quero este plano</button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card">
+      <h3>Mod Gráfico</h3>
+      <p>Transforme a aparência do seu GTA RP com gráficos melhorados, texturas detalhadas e efeitos visuais aprimorados para uma experiência imersiva.</p>
+      <div class="price">R$ 24,99</div>
+      <button class="btn-buy" onclick="openPopup('Mod Gráfico')">Quero este plano</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-content">
+    <h2 id="popup-title">Plano</h2>
+    <p id="popup-desc">Descrição do plano selecionado</p>
+    <a id="whatsapp-btn" href="#" target="_blank" class="popup-btn">Comprar via WhatsApp</a>
+    <a id="discord-btn" href="#" target="_blank" class="popup-btn">Comprar via Discord</a>
+    <br><br>
+    <button onclick="closePopup()" class="popup-btn">Fechar</button>
+  </div>
+</div>
+
+<footer>
+  © 2026 abiduBOOST — Todos os direitos reservados
+</footer>
+
+<script>
+  function openPopup(plan){
+    let desc = "";
+    let whatsappLink = "";
+    let discordLink = "https://discord.gg/TCCTXjgEXr";
+
+    if(plan === "Otimização Básica"){
+      desc = "Ajustes completos nos arquivos do jogo, configs avançadas e aplicação de mods otimizados para garantir desempenho estável.";
+      whatsappLink = "https://wa.me/5511943639094?text=Olá,%20quero%20comprar%20a%20Otimização%20Básica";
+    } else if(plan === "Otimização Potente"){
+      desc = "Inclui tudo da otimização básica, além de acesso exclusivo a um aplicativo de otimização que mantém seu jogo sempre ajustado.";
+      whatsappLink = "https://wa.me/5511943639094?text=Olá,%20quero%20comprar%20a%20Otimização%20Potente";
+    } else if(plan === "Mod Gráfico"){
+      desc = "Melhore os gráficos do seu GTA RP com texturas detalhadas e efeitos visuais avançados, para uma experiência mais imersiva.";
+      whatsappLink = "https://wa.me/5511943639094?text=Olá,%20quero%20comprar%20o%20Mod%20Gráfico";
+    }
+
+    document.getElementById("popup-title").innerText = plan;
+    document.getElementById("popup-desc").innerText = desc;
+    document.getElementById("whatsapp-btn").href = whatsappLink;
+    document.getElementById("discord-btn").href = discordLink;
+
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function closePopup(){
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
