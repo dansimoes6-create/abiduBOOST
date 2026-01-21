@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>abiduBOOST — Otimização FiveM</title>
+
+  <meta name="description" content="abiduBOOST é uma empresa de otimização FiveM criada em 2025. GTA RP liso até em PC fraco." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #ffffff;
+      background: #0b0f1a;
+      overflow-x: hidden;
+    }
+
+    /* FUNDO LÍQUIDO */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        #3a7bd5,
+        #00d2ff,
+        #7f00ff,
+        #00ffcc
+      );
+      background-size: 400% 400%;
+      animation: liquid 18s ease infinite;
+      filter: blur(70px);
+      opacity: 0.55;
+      z-index: -1;
+    }
+
+    @keyframes liquid {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10, 15, 30, 0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #00d2ff;
+    }
+
+    .socials a {
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #ffffff;
+      transition: opacity 0.3s;
+    }
+
+    .socials a:hover {
+      opacity: 0.7;
+    }
+
+    /* CONTEÚDO */
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 160px 20px 60px;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 900px;
+      background: rgba(15, 20, 40, 0.55);
+      backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 60px 40px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .dream-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      margin-bottom: 45px;
+      color: #e0f7ff;
+    }
+
+    .dream-text strong {
+      color: #00d2ff;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #0b0f1a;
+      background: linear-gradient(135deg, #00d2ff, #7f00ff);
+      border-radius: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 210, 255, 0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(127, 0, 255, 0.5);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .dream-text {
+        font-size: 1.05rem;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">abidu<span>BOOST</span></div>
+
+    <div class="socials">
+      <!-- COMPLETE SEU NÚMERO AQUI -->
+      <a href="https://wa.me/551194363XXXX" target="_blank">WhatsApp</a>
+
+      <!-- DISCORD VOCÊ COLOCA DEPOIS -->
+      <a href="#" title="Discord em breve">Discord</a>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container">
+    <div class="card">
+      <h1>O GTA RP que você sempre sonhou</h1>
+
+      <p class="dream-text">
+        Você sempre sonhou em jogar <strong>GTA RP no FiveM</strong>, entrar em cidades
+        completas, viver histórias, fazer RP de verdade… mas seu computador simplesmente
+        não aguenta?
+        <br><br>
+        A <strong>abiduBOOST</strong> nasceu em 2025 com um único objetivo:
+        extrair o máximo desempenho do seu PC, mesmo que ele seja fraco ou antigo.
+        <br><br>
+        Nossa equipe é especializada em otimização profunda de sistema, ajustes avançados
+        no FiveM, GTA V e Windows, eliminando travamentos, quedas de FPS e engasgos.
+        <br><br>
+        O resultado? Um jogo <strong>mais liso que sabonete</strong>, pronto pra você
+        aproveitar o RP sem dor de cabeça.
+      </p>
+
+      <a href="#" class="btn">Conheça nossos serviços</a>
+
+      <footer>
+        © 2025 abiduBOOST — Todos os direitos reservados
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>biduBOOST — Todos os direitos reservados
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
